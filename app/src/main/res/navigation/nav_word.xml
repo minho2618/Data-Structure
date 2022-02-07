@@ -1,6 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/nav_word">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_word"
+    app:startDestination="@id/wordListFragment">
+
+
+    <fragment
+        android:id="@+id/wordListFragment"
+        android:name="com.kwuproject.wordvocabulary.wordlist.WordListFragment"
+        android:label="fragment_word_list"
+        tools:layout="@layout/fragment_word_list" >
+        <action
+            android:id="@+id/action_wordListFragment_to_wordVocaFragment"
+            app:destination="@id/wordVocaFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/wordVocaFragment"
+        android:name="com.kwuproject.wordvocabulary.wordvoca.WordVocaFragment"
+        android:label="fragment_word_voca"
+        tools:layout="@layout/fragment_word_voca" >
+        <action
+            android:id="@+id/action_wordVocaFragment_to_wordListFragment"
+            app:destination="@id/wordListFragment" />
+    </fragment>
 
 </navigation>
