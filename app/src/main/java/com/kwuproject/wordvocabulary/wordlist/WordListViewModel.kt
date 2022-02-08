@@ -13,7 +13,7 @@ import kotlinx.coroutines.launch
 class WordListViewModel(dataSource: WordDatabaseDao, application: Application) : ViewModel() {
     private val database = dataSource
 
-    val words= database.getWordList()
+    val words = database.getAll()
 
 
 }

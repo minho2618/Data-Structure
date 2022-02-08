@@ -15,7 +15,4 @@ interface WordDatabaseDao {
 
     @Query("SELECT * FROM word_vocabulary_table")
     fun getAll(): List<WordVocabulary>
-
-    @Query("SELECT * FROM word_vocabulary_table WHERE word_name")
-    fun getWordList(): List<String>
 }
